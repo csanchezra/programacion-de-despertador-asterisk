@@ -91,9 +91,8 @@ function confirmar(url)
         <th width="5%">Cancelar</th>
     </tr>
 <?php 
-    //$sql = "select * from datos_nick";
-
-    $sql = "SELECT id,extension,audio,idioma,fecha,ruta,IF(estado=0,'Programada', IF(estado=1,'Realizada',IF(estado=2,'Cancelada', 'LESS'))) AS estado FROM datos_nick";
+ 
+    $sql = "SELECT id,extension,audio,idioma,fecha,ruta,IF(estado=0,'Programada', IF(estado=1,'Realizada',IF(estado=2,'Cancelada', 'LESS'))) AS estado FROM base_despertador";
     $result = db_query($sql);
     while($row = mysqli_fetch_object($result)){
     ?>

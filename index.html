@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Programación de llamadas</title>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    padding: 4px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+.main-wrapper{
+    width:60%;
+    
+    background:#E0E4E5;
+    border:1px solid #292929;
+    padding:25px;
+    margin:auto;
+}
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+h1{
+    font-size:24px;
+    }
+</style>
+
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+
+
+</head>
+
+<body>
+
+<a href="listar.php" style="float: right;"><img src="registro.png" alt="Consultar registros width="70" height="70""/>Registro de llamadas</a>
+
+<form action="recibi.php" method="post">
+<p><textarea name="extensiones" rows="20" cols="30" placeholder="Ingresa las extensiones" required>
+</textarea></p>
+ <!-- Campo de entrada de fecha -->
+  Fecha deseada:
+  <input type="date" name="fecha" required>
+  <!-- Campo de entrada de hora -->
+  <p>
+  Hora deseada:
+  <input type="time" name="hora" required>
+
+<p>
+
+<select name="idioma">
+   <option value="1">Español</option>
+   <option value="2">Inglés</option> required
+</select
+
+
+<p>
+<select name="personaje">
+   <option disabled selected value>Selecciona una opción</option>
+   <option value="1">Audio 1</option>
+   <option value="2">Audio 2</option>
+   <option value="3">Audio 3</option>
+   
+required
+</select>
+<p>
+<p><input type="submit" value="Enviar" /></p>
+
+
+</form>
+
+</body>
+</html>
